@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Check out our Shop</title>
+	<style>
+	/* Navbars */
+	nav {
+		color: #000;
+		font-size: 1.1em;
+		letter-spacing: 0.04em;
+		padding: 0.7em;
+		margin: 1.0em 0 ;
+	}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	nav li {
+		display: inline-block;
+		margin: 0;
+	}
+	nav li a, nav li a:visited {
+		text-decoration: none;
+		color: #C64322;
+		padding: 0.3em; 0.6em;
+	}
+	nav li a:hover {
+		color: #C64322;
+		background-color: rgba(252,251,243,0.75);
+	}
+	a {
+		text-decoration: none;
+	}
+	/* unvisited link */
+	a:link {
+	    color: green;
+	}
+
+	/* visited link */
+	a:visited {
+	    color: green;
+	}
+
+	/* mouse over link */
+	a:hover {
+	    color: red;
+	}
+
+	/* selected link */
+	a:active {
+	    color: yellow;
+	}
+	*, *:before, *:after {
+  	box-sizing: border-box;
+	}
+	button {
+	color: purple;
+	background-color: #fff;
+	display: inline-block;
+	margin: 0 0.75em 0 0;
+	padding: 0.2em 0.5em;
+	border: 3px solid #C64322;
+	text-transform: uppercase;
+	}
+	button:hover {
+		color: black;
+		background-color: silver;
+	}
+	#orderbtn {
+		margin-top: 2.7em;
+	}
+body {
+  margin: 40px;
+  font-family: Helvetica, serif;
+  /* background-color: #1b1b4b; */
+  background-image: url(img/shirt1.jpg);
+}
+
+div.panel1 img.shirts {
+	float: left;
+	position: relative;
+	width: 250px;
+	margin: 0 0.5em 2.0em 0.5em;
+	padding: 1.0em;
+	background-color: #fff;
+	border: #ccc solid 1px;
+	border-radius: 0.6em;
+}
+
+img {
+	width: 250px;
+	height: auto;
+}
+.wrapper {
+  max-width: 79%;
+  margin: 0 20px;
+  display: grid;
+  grid-gap: 10px;
+}
+
+@media screen and (min-width: 500px) {
+
+  /* no grid support? */
+  .sidebar {
+    float: left;
+    width: 19.1489%;
+  }
+
+  .content {
+    float: right;
+    width: 79.7872%;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    grid-template-columns: 1fr 3fr;
+  }
+  
+  .header, .footer {
+  	text-align: center;
+    grid-column: 1 / -1;
+    /* needed for the floated layout */
+    clear: both;
+  }
+
+}
+
+footer ul li {
+	display: inline-block;
+	padding: 0 0.7em 0 0;
+	margin: 0;
+}
+
+.wrapper > * {
+  background-color: white;
+  
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 99%;
+  /* needed for the floated layout*/
+  margin-bottom: 10px;
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
+}
+	</style>
+</head>
+<body>
+	
+	<div class="wrapper">
+
+	  <header class="header">
+
+	  <h1><a href="index.html">Simon's M2M Shirts</a></h1>
+
+	  	<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="store.html">Shop</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	  	
+	  	
+	  </header>
+
+	  <aside class="sidebar">
+		<p>News</p>
+		<ul>
+			<li><a href="#">8/5/17</a></li>
+			<li><a href="#">8/4/17</a></li>
+			<li><a href="#">8/3/17</a></li>
+			<li><a href="#">8/2/17</a></li>
+			<li><a href="#">7/21/17</a></li>
+			<li><a href="#">7/18/17</a></li>
+			<li><a href="#">7/16/17</a></li>
+			<li><a href="#">7/14/17</a></li>
+			<li><a href="#">7/12/17</a></li>
+			<li><a href="#">7/10/17</a></li>
+		</ul>
+		<p>Connect</p>
+		<ul>
+			<li><a href="#">Twitter</a></li>
+			<li><a href="#">Facebook</a></li>
+			<li><a href="#">Instagram</a></li>
+		</ul>
+	  </aside>
+
+	  <article class="content">
+	    <div class="panel1">
+			<a href="#"><img src="img/shirt3.jpg" class="shirts" alt="shirt3" border= "0" /></a>
+			<h4>This Month's Featured Shirt: "Blue"</h4>
+			<p>Our Blue Shirt is perfect for work, play, or just hanging out. It is made with the finest British fabric, and fits your body perfectly; available in regular and slim-fit.</p>
+			<p id="orderbtn"><button>Order</button></p>
+		</div>
+	  </article>
+
+	  	<footer class="footer">
+			<!-- legal terms, privacy policy -->
+			<ul>
+				<li><a href="#">Sitemap</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+				<li>Website by Simon Lee</li>
+				<li><span>&copy;2017 </span></li>
+			</ul>
+		</footer>
+	</div>
+
+</body>
+</html>
